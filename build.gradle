@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.perch'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    // Use your local Spigot API JARs
+    compileOnly name: 'spigot-api-1.21.5-R0.1-SNAPSHOT'
+    compileOnly name: 'spigot-api-1.14.1-R0.1-SNAPSHOT'
+    compileOnly 'com.github.brcdev-minecraft:shopgui-api:1.0.1'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

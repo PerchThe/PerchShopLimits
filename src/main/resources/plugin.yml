@@ -1,0 +1,12 @@
+name: PerchShopLimits
+main: org.perch.PerchShopLimits
+version: 1.0
+api-version: 1.21
+author: KayaLambrex
+depend: [ShopGUIPlus]
+description: Adds a daily earnings limit to ShopGUI+ sales.
+
+commands:
+  limit:
+    description: Check your daily sell limit or another player's.
+    usage: /limit [player]
